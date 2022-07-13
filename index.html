@@ -35,6 +35,19 @@
                 <li v-for="(task , i) in tasks" class="list-group-item d-flex align-items-center justify-content-between" ><p class="my-0":class="{'crossed':task.done}" @click="crossTask(i)">{{task.text}}</p><button type="button" class="btn-close" @click="deleteTask(i)"></button></li>
                 
             </ul>
+            <div class="input-group mb-2">
+                <input 
+                v-model.trim="newTask.text" 
+                type="text" 
+                class="form-control" 
+                placeholder="Add Task" 
+                @keyup.enter="addTask">
+                <button 
+                type="button" 
+                class="btn btn-success">
+                    <i class="fa-solid fa-plus" @click="addTask" ></i>
+                </button>
+            </div>
         </main>
     </div>
     <script src="js/script.js"></script>
