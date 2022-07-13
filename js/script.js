@@ -34,8 +34,12 @@ const app = new Vue({
         addTask(){
             if (this.newTask.text){
                 this.tasks.push(this.newTask);
-
+                this.newTask = {
+                    text:'',
+                    done:false,
+                }
             }
+           
         }
     }
 });
