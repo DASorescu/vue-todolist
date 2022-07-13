@@ -19,6 +19,7 @@ li{
     font-family: 'Shadows Into Light', cursive;
 }
 
-li.crossed{
+.crossed{
     text-decoration: line-through;
 }
+

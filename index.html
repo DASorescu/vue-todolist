@@ -32,7 +32,7 @@
         </header>
         <main class="w-50 mx-auto">
             <ul class="list-group my-3">
-                <li v-for="(task , i) in tasks" class="list-group-item d-flex align-items-center" :class="{'crossed':task.done}" @click="crossTask(i)" >{{task.text}}</li>
+                <li v-for="(task , i) in tasks" class="list-group-item d-flex align-items-center justify-content-between" ><p class="my-0":class="{'crossed':task.done}" @click="crossTask(i)">{{task.text}}</p><button type="button" class="btn-close" @click="deleteTask(i)"></button></li>
                 
             </ul>
         </main>
